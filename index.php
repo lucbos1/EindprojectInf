@@ -1,3 +1,2 @@
 <h1>Welkom</h1>
-Hoe werkt deze wedoie
-HAAHSHHFEWF
+Hoe werkt deze w
