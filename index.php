@@ -35,6 +35,7 @@ if (!$conn) {
     	    </div>
     	</nav>
 <main>
+    <a href="">HOI</a>
 <h1>Welkom</h1>
 Hoe werkt deze wEERKTSTSregwegwergewrg
 <!-- In dit document staat de footer die op elke pagina wordt weergegeven -->
