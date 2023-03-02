@@ -6,5 +6,4 @@ include_once "header.php";
 Hoe werkt deze wEERKTSTS
 <?php 
 include_once "footer.php";
-
 ?>
