@@ -26,7 +26,7 @@ if (!$conn) {
     </head>
     <body>
     	<nav>
-    	    <a href='index.php'>HOME</a>
+    	    <a href="">HOME</a>
     	    <div>
     	      <a href="">Registreren</a>
     	      <a href="">Inloggen</a>
