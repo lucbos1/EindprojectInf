@@ -29,7 +29,7 @@ if (!$conn) {
   <body>
     	<nav>
     	    <a href='index.php'>HOME</a>
-    	    <div style='display:grid; align-items: center; grid-template-columns: repeat(2, auto);'>
+    	    <div>
     	      <a href="">Registreren</a>
     	      <a href="">Inloggen</a>
     	    </div>
