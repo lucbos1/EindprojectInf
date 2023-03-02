@@ -28,10 +28,10 @@ if (!$conn) {
   </head>
   <body>
     	<nav>
-    	    <a href='index.php'><img src='img/MAINTENANCE_MEISTER_Icon.png'></a>
+    	    <a href='index.php'>HOME</a>
     	    <div style='display:grid; align-items: center; grid-template-columns: repeat(2, auto);'>
-    	      <a class='titel' id='signup' href='signup.php'>Ook Meister worden?</a>
-    	      <a class='titel login_button' id='login' href='login.php'>Inloggen</a>
+    	      <a href="">Registreren</a>
+    	      <a href="">Inloggen</a>
     	    </div>
     	</nav>
 <main>
