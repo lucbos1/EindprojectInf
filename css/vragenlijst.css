@@ -1,16 +1,30 @@
 div[id^="vragenlijstA_pagina"], div[id^="vragenlijstB_pagina"] {
-    display: grid;
+    display: none;
     grid-template-columns: 1fr;
     grid-auto-rows: 7vh;
     row-gap: 1vh;
-    margin-top: 5vh;
-    height: fit-content;
+    position: absolute;
+    top: 15vh;
+    height: fit-content; width: 100vw;
+}
+
+div#vragenlijstA_pagina1, div#vragenlijstB_pagina1 {
+    display: grid;
+}
+
+button#page1_btn {
+    text-decoration: underline var(--main-txt-color);
 }
 
 div[id^="vraag"] {
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-columns: 3fr repeat(3, auto);
     column-gap: 4vw;
+    align-items: center;
+    margin: 0 2.5vw; padding: .8vh 2vw;
+
+    background-color: white;
+    box-shadow: 20px red inset;
 }
 
 .form-control {
