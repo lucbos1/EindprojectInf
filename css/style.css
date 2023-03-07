@@ -38,6 +38,10 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 #error {
     display: grid;
     grid-template-columns: 1fr auto;
