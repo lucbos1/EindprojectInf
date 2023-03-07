@@ -22,6 +22,7 @@ $leerlingNr = "214425";
     <div id="wrapper">
 
         <div id="vragenlijstB_pagina1">
+            pagina 1
             <div id="vraag1">
                 <p>Ik vind het leuk om naar school te gaan</p>
                 <label class="form-control"><input type="radio" name="vraag1" value="PS3" required/>Dat is zo</label>
@@ -138,6 +139,7 @@ $leerlingNr = "214425";
         <br><br><br>
 
         <div id="vragenlijstB_pagina2">
+            pagina 2
             <div id="vraag17">
                 <p>Als ik iemand die ik niet ken een hand moet geven, dan ben ik daarna het liefst zo snel mogelijk weg</p>
                 <label class="form-control"><input type="radio" name="vraag17" value="SV1" required/>Dat is zo</label>
@@ -254,6 +256,7 @@ $leerlingNr = "214425";
         <br><br><br>
         
         <div id="vragenlijstB_pagina3">
+            pagina 3
             <div id="vraag33">
                 <p>Als ik tijdens de les denk dat ik het anwoord op een vraag weet, voel ik me meestal zeker genoeg om het te zeggen</p>
                 <label class="form-control"><input type="radio" name="vraag33" value="ZP3" required/>Dat is zo</label>
@@ -370,6 +373,7 @@ $leerlingNr = "214425";
         <br><br><br>
 
         <div id="vragenlijstB_pagina4">
+            pagina 4
             <div id="vraag49">
                 <p>Als ik een spreekbeurt houd, kan ik er gemakkelijk een goed verhaal van maken</p>
                 <label class="form-control"><input type="radio" name="vraag49" value="UV3" required/>Dat is zo</label>
@@ -486,6 +490,7 @@ $leerlingNr = "214425";
         <br><br><br>
 
         <div id="vragenlijstB_pagina5">
+            pagina 5
             <div id="vraag65">
                 <p>Ik zit de hele dag uit te kijken naar het moment dat de school uitgaat</p>
                 <label class="form-control"><input type="radio" name="vraag65" value="PS1" required/>Dat is zo</label>
@@ -600,7 +605,7 @@ $leerlingNr = "214425";
         </div>
 
         <input type="hidden" name="leerlingNr" value='<?php echo "$leerlingNr";?>'/>
-        <button type='submit' name='submit'>Lever vragenlijst in</button>
+        <button style='z-index: 999; position: absolute; top: 10vh; right: 0;' type='submit' name='submit'>Lever vragenlijst in</button>
     </div>
 </form>
 
@@ -627,6 +632,14 @@ $leerlingNr = "214425";
     }
 ?>
 
+<div style='z-index: 999; position: absolute; top: 0; right: 0;'>
+    <button id="page1_btn"><p>page1_btn</p></button>
+    <button id="page2_btn"><p>page2_btn</p></button>
+    <button id="page3_btn"><p>page3_btn</p></button>
+    <button id="page4_btn"><p>page4_btn</p></button>
+    <button id="page5_btn"><p>page5_btn</p></button>
+</div>
+
 <?php include_once 'footer.php'; ?>  
 
 <script>
@@ -638,4 +651,146 @@ function closeError() {
       }
       ,500);
 }
+// De hieronderstaande code is verantwoordelijk voor de pagina selectie
+const page1_btn = document.getElementById('page1_btn');
+const page2_btn = document.getElementById('page2_btn');
+const page3_btn = document.getElementById('page3_btn');
+const page4_btn = document.getElementById('page4_btn');
+const page5_btn = document.getElementById('page5_btn');
+
+const page1 = document.getElementById('vragenlijstB_pagina1');
+const page2 = document.getElementById('vragenlijstB_pagina2');
+const page3 = document.getElementById('vragenlijstB_pagina3');
+const page4 = document.getElementById('vragenlijstB_pagina4');
+const page5 = document.getElementById('vragenlijstB_pagina5');
+
+page1_btn.addEventListener('click', () => {
+    if (page1.style.display === 'none') {
+        page1.style.display = 'grid'
+        page2.style.display = 'none'
+        page3.style.display = 'none'
+        page4.style.display = 'none'
+        page5.style.display = 'none'
+        page1_btn.style.textDecoration = 'underline var(--main-txt-color)'
+        page2_btn.style.textDecoration = 'none'
+        page3_btn.style.textDecoration = 'none';
+        page4_btn.style.textDecoration = 'none';
+        page5_btn.style.textDecoration = 'none';
+    } else {
+        page1.style.display = 'grid'
+        page2.style.display = 'none'
+        page3.style.display = 'none'
+        page4.style.display = 'none'
+        page5.style.display = 'none'
+        page1_btn.style.textDecoration = 'underline var(--main-txt-color)'
+        page2_btn.style.textDecoration = 'none'
+        page3_btn.style.textDecoration = 'none';
+        page4_btn.style.textDecoration = 'none';
+        page5_btn.style.textDecoration = 'none';
+    }
+});
+
+page2_btn.addEventListener('click', () => {
+    if (page2.style.display === 'none') {
+        page1.style.display = 'none'
+        page2.style.display = 'grid'
+        page3.style.display = 'none'
+        page4.style.display = 'none'
+        page5.style.display = 'none'
+        page1_btn.style.textDecoration = 'none'
+        page2_btn.style.textDecoration = 'underline var(--main-txt-color)'
+        page3_btn.style.textDecoration = 'none';
+        page4_btn.style.textDecoration = 'none';
+        page5_btn.style.textDecoration = 'none';
+    } else {
+        page1.style.display = 'none'
+        page2.style.display = 'grid'
+        page3.style.display = 'none'
+        page4.style.display = 'none'
+        page5.style.display = 'none'
+        page1_btn.style.textDecoration = 'none'
+        page2_btn.style.textDecoration = 'underline var(--main-txt-color)'
+        page3_btn.style.textDecoration = 'none';
+        page4_btn.style.textDecoration = 'none';
+        page5_btn.style.textDecoration = 'none';
+    }
+});
+
+page3_btn.addEventListener('click', () => {
+    if (page3.style.display === 'none') {
+        page1.style.display = 'none'
+        page2.style.display = 'none'
+        page3.style.display = 'grid'
+        page4.style.display = 'none'
+        page5.style.display = 'none'
+        page1_btn.style.textDecoration = 'none'
+        page2_btn.style.textDecoration = 'none'
+        page3_btn.style.textDecoration = 'underline var(--main-txt-color)';
+        page4_btn.style.textDecoration = 'none';
+        page5_btn.style.textDecoration = 'none';
+    } else {
+        page1.style.display = 'none'
+        page2.style.display = 'none'
+        page3.style.display = 'grid'
+        page4.style.display = 'none'
+        page5.style.display = 'none'
+        page1_btn.style.textDecoration = 'none'
+        page2_btn.style.textDecoration = 'none'
+        page3_btn.style.textDecoration = 'underline var(--main-txt-color)';
+        page4_btn.style.textDecoration = 'none';
+        page5_btn.style.textDecoration = 'none';
+    }
+});
+
+page4_btn.addEventListener('click', () => {
+    if (page4.style.display === 'none') {
+        page1.style.display = 'none'
+        page2.style.display = 'none'
+        page3.style.display = 'none'
+        page4.style.display = 'grid'
+        page5.style.display = 'none'
+        page1_btn.style.textDecoration = 'none'
+        page2_btn.style.textDecoration = 'none'
+        page3_btn.style.textDecoration = 'none';
+        page4_btn.style.textDecoration = 'underline var(--main-txt-color)';
+        page5_btn.style.textDecoration = 'none';
+    } else {
+        page1.style.display = 'none'
+        page2.style.display = 'none'
+        page3.style.display = 'none'
+        page4.style.display = 'grid'
+        page5.style.display = 'none'
+        page1_btn.style.textDecoration = 'none'
+        page2_btn.style.textDecoration = 'none'
+        page3_btn.style.textDecoration = 'none';
+        page4_btn.style.textDecoration = 'underline var(--main-txt-color)';
+        page5_btn.style.textDecoration = 'none';
+    }
+});
+
+page5_btn.addEventListener('click', () => {
+    if (page5.style.display === 'none') {
+        page1.style.display = 'none'
+        page2.style.display = 'none'
+        page3.style.display = 'none'
+        page4.style.display = 'none'
+        page5.style.display = 'grid'
+        page1_btn.style.textDecoration = 'none'
+        page2_btn.style.textDecoration = 'none'
+        page3_btn.style.textDecoration = 'none';
+        page4_btn.style.textDecoration = 'none';
+        page5_btn.style.textDecoration = 'underline var(--main-txt-color)';
+    } else {
+        page1.style.display = 'none'
+        page2.style.display = 'none'
+        page3.style.display = 'none'
+        page4.style.display = 'none'
+        page5.style.display = 'grid'
+        page1_btn.style.textDecoration = 'none'
+        page2_btn.style.textDecoration = 'none'
+        page3_btn.style.textDecoration = 'none';
+        page4_btn.style.textDecoration = 'none';
+        page5_btn.style.textDecoration = 'underline var(--main-txt-color)';
+    }
+});
 </script>
